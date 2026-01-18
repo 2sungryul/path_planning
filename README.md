@@ -5,6 +5,7 @@
 $ ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=map.yaml
 
 $ ros2 lifecycle set /map_server configure
+
 $ ros2 lifecycle set /map_server activate
 
 or 
