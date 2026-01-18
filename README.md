@@ -13,15 +13,12 @@ $ ros2 run nav2_lifecycle_manager lifecycle_manager --ros-args -p node_names:=['
 
 # how to run planner server
 
-$ ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 map base_link
-
-$ ros2 run nav2_planner planner_server --ros-args --params-file myplanner.yaml
-
-$ ros2 lifecycle set /planner_server configure
-$ ros2 lifecycle set /planner_server activate
-
-or
-$ ros2 run nav2_lifecycle_manager lifecycle_manager --ros-args -p node_names:=['planner_server'] -p autostart:=true
+> $ ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 map base_link
+> $ ros2 run nav2_planner planner_server --ros-args --params-file myplanner.yaml
+> $ ros2 lifecycle set /planner_server configure
+> $ ros2 lifecycle set /planner_server activate
+> or
+> $ ros2 run nav2_lifecycle_manager lifecycle_manager --ros-args -p node_names:=['planner_server'] -p autostart:=true
 
 # how to run action client
 
